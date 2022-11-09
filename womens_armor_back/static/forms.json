@@ -1,8 +1,29 @@
 [
     {
-        "nombre": "guada"
+        "nombre": "Guadalupe",
+        "dni": "44554433",
+        "telefono": "1162554080",
+        "mail": "guada@gmail.com",
+        "dia": "Lunes",
+        "hora": "11:11",
+        "sucesos": "hola aaa"
     },
     {
-        "nombre": "guada"
+        "nombre": "Ubi\u00f1a",
+        "dni": "44554333",
+        "telefono": "123",
+        "mail": "guadaubin@jfja.com",
+        "dia": "Lunes",
+        "hora": "11:11",
+        "sucesos": "aaa"
+    },
+    {
+        "nombre": "Guadalupe",
+        "dni": "44554433",
+        "telefono": "1162554080",
+        "mail": "guada@gmail.com",
+        "dia": "Miercoles",
+        "hora": "11:11",
+        "sucesos": "AGUSTINAAAAAAAAAAAA"
     }
 ]
