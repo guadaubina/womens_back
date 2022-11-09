@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
 import os, json
 from flask_cors import CORS
+import random
+import uuid
 
 app = Flask(__name__)
 CORS(app)
@@ -49,6 +51,8 @@ def new_consulta():
 def new_suscripcion():
     path = os.path.join("static", "suscripciones.json")
     new_form = request.json
+    suscripcion_id = random.randint(1, 100)
+    new_form["suscripcion_id"]=suscripcion_id
 
     if not os.path.exists(path):
         with open(path, "w") as file:
@@ -65,6 +69,35 @@ def new_suscripcion():
             file.seek(0)
             json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
             return jsonify({"form": new_form, "message": "Subscription successfully registered", "status": "201"})
+
+
+@app.route('/api/v1/suscripcion', methods=['GET'])
+def ver_suscripciones():
+    path = os.path.join("static", "suscripciones.json")
+
+    if os.path.exists(path):
+        with open(path, "r") as file:
+            suscripciones = json.load(file)  # convert json object to python object
+            return jsonify({"suscripciones": suscripciones, "message": "Suscripciones realizadas", "status": "200"})
+
+    return jsonify({"suscripciones": None, "message": "No se han realizado ninguna suscripcion", "status": "204"})
+
+
+@app.route('/api/v1/suscripcion/<mail>', methods=['DELETE'])
+def delete_by_mail(mail):
+    path = os.path.join("static", "suscripciones.json")
+    with open(path, "r") as file:
+        suscripciones = json.load(file)
+        return suscripciones
+
+        for suscripcion in suscripciones:
+            if suscripcion["mailA"] == mail:
+                print(suscripcion["mailA"])
+                #suscripciones.remove(suscripcion)
+                #file.write(str(suscripciones))
+            else:
+                return "el mail no ha sido econtrado"
+
 
 if __name__ == '__main__':
     app.run()
