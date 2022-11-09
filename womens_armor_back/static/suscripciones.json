@@ -14,5 +14,19 @@
     {
         "mailA": "guadaubina@gmail.com",
         "suscripcion_id": 34
+    },
+    {
+        "mailA": "anafreggiaro100@gmail.com",
+        "suscripcion_id": 23
+    },
+    {
+        "dia": "Lunes",
+        "dni": "44554433",
+        "hora": "11:11",
+        "mail": "guada@gmail.com",
+        "nombre": "Guadalupe",
+        "sucesos": "hola aaa",
+        "telefono": "1162554080",
+        "suscripcion_id": 21
     }
 ]
