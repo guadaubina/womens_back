@@ -35,7 +35,7 @@ def new_consulta():
             forms = list()
             forms.append(new_form)
             json.dump(forms, file, indent=4)  # python dic to json file
-            return jsonify({"form": new_form, "message": "Form successfully registered", "status": "201"})
+            return jsonify({"message": "Form successfully registered", "status": "201"})
 
     else:
         with open(path, "r+") as file:
@@ -84,20 +84,17 @@ def ver_suscripciones():
 
 
 @app.route('/api/v1/suscripcion/<mail>', methods=['DELETE'])
-def delete_by_mail(mail):
+def delete(mail):
+    mail_user = mail
     path = os.path.join("static", "suscripciones.json")
-    with open(path, "r") as file:
+    with open(path, "r+") as file:
         suscripciones = json.load(file)
-        return suscripciones
-
         for suscripcion in suscripciones:
-            if suscripcion["mailA"] == mail:
-                print(suscripcion["mailA"])
-                #suscripciones.remove(suscripcion)
-                #file.write(str(suscripciones))
-            else:
-                return "el mail no ha sido econtrado"
-
+            if suscripcion["mailA"] == mail_user:
+                suscripciones.remove(suscripcion)
+                with open(path, "w") as file2:
+                    file2.write(json.dumps(suscripciones, indent=4))
+                    return "tu mail ha sido eliminado"
 
 if __name__ == '__main__':
     app.run()
