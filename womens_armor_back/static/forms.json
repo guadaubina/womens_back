@@ -1,29 +1,11 @@
 [
     {
-        "nombre": "Guadalupe",
-        "dni": "44554433",
-        "telefono": "1162554080",
-        "mail": "guada@gmail.com",
-        "dia": "Lunes",
-        "hora": "11:11",
-        "sucesos": "hola aaa"
-    },
-    {
-        "nombre": "",
+        "nombre": "Martina Stroppa Miras",
         "dni": "",
-        "telefono": "1162554080",
-        "mail": "guadaubina@gmail.com",
+        "telefono": "15452165",
+        "mail": "martism.2014@gmail.com",
         "dia": "Miercoles",
-        "hora": "11:11",
-        "sucesos": ""
-    },
-    {
-        "nombre": "Guadalupe",
-        "dni": "",
-        "telefono": "1162554080",
-        "mail": "guada@gmail.com",
-        "dia": "Miercoles",
-        "hora": "11:11",
+        "hora": "15:15",
         "sucesos": ""
     }
 ]

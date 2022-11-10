@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
-import os, json
+import os
+import json
 from flask_cors import CORS
 import random
-import uuid
+# import uuid
+from db.db_manager import save_new_consulta
 
 app = Flask(__name__)
 CORS(app)
@@ -35,16 +37,28 @@ def new_consulta():
             forms = list()
             forms.append(new_form)
             json.dump(forms, file, indent=4)  # python dic to json file
+            save_new_consulta(forms)
             return jsonify({"message": "Form successfully registered", "status": "201"})
 
     else:
         with open(path, "r+") as file:
             forms = json.load(file)  # load read JSON FILE to dict. #loads read JSON STRING to dict
-
             forms.append(new_form)
             file.seek(0)
             json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
+            save_new_consulta(forms)
             return jsonify({"form": new_form, "message": "Form successfully registered", "status": "201"})
+
+    # with open(path_csv, "w") as my_file:
+     # wr = csv.DictWriter(my_file, fieldnames=new_form)
+      #  wr.writeheader()
+       # wr.writerows(forms_csv)
+        #return jsonify({"form": new_form, "message": "FUNCIONA", "status": "201"})
+
+        # with open(path_csv, "w") as my_file:
+         #   wr = csv.DictWriter(my_file, fieldnames=new_form)
+          #  wr.writeheader()
+           # wr.writerows(forms)
 
 
 @app.route('/api/v1/suscripcion', methods=['POST'])
