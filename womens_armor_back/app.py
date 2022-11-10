@@ -21,7 +21,7 @@ def ver_consultas():
 
     if os.path.exists(path):
         with open(path, "r") as file:
-            forms = json.load(file)  # convert json object to python object
+            forms = json.load(file)
             return forms
 
     return "No se han realizado consultas"
@@ -36,29 +36,17 @@ def new_consulta():
         with open(path, "w") as file:
             forms = list()
             forms.append(new_form)
-            json.dump(forms, file, indent=4)  # python dic to json file
+            json.dump(forms, file, indent=4)
             save_new_consulta(forms)
             return "El formulario ha sido creado de forma exitosa"
     else:
         with open(path, "r+") as file:
-            forms = json.load(file)  # load read JSON FILE to dict. #loads read JSON STRING to dict
+            forms = json.load(file)
             forms.append(new_form)
             file.seek(0)
-            json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
+            json.dump(forms, file, indent=4)
             save_new_consulta(forms)
             return "El formulario ha sido completado de forma exitosa"
-
-
-    # with open(path_csv, "w") as my_file:
-     # wr = csv.DictWriter(my_file, fieldnames=new_form)
-      #  wr.writeheader()
-       # wr.writerows(forms_csv)
-        #return jsonify({"form": new_form, "message": "FUNCIONA", "status": "201"})
-
-        # with open(path_csv, "w") as my_file:
-         #   wr = csv.DictWriter(my_file, fieldnames=new_form)
-          #  wr.writeheader()
-           # wr.writerows(forms)
 
 
 @app.route('/api/v1/suscripcion', methods=['POST'])
@@ -72,16 +60,16 @@ def new_suscripcion():
         with open(path, "w") as file:
             forms = list()
             forms.append(new_form)
-            json.dump(forms, file, indent=4)  # python dic to json file
+            json.dump(forms, file, indent=4)
             return "la suscripción ha sido creada de forma exitosa"
 
     else:
         with open(path, "r+") as file:
-            forms = json.load(file)  # load read JSON FILE to dict. #loads read JSON STRING to dict
+            forms = json.load(file)
 
             forms.append(new_form)
             file.seek(0)
-            json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
+            json.dump(forms, file, indent=4)
             return "la suscripción ha sido realizada de forma exitosa"
 
 
@@ -91,7 +79,7 @@ def ver_suscripciones():
 
     if os.path.exists(path):
         with open(path, "r") as file:
-            suscripciones = json.load(file)  # convert json object to python object
+            suscripciones = json.load(file)
             return suscripciones
 
     return "No se ha realizado ninguna suscripcion"

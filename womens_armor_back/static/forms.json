@@ -1,29 +1,3 @@
 [
-    {
-<<<<<<< HEAD
-        "nombre": "Martina Stroppa Miras",
-        "dni": "",
-        "telefono": "15452165",
-        "mail": "martism.2014@gmail.com",
-        "dia": "Miercoles",
-        "hora": "15:15",
-=======
-        "nombre": "Guadalupe",
-        "dni": "44554433",
-        "telefono": "1162554080",
-        "mail": "guada@gmail.com",
-        "dia": "Lunes",
-        "hora": "11:11",
-        "sucesos": ""
-    },
-    {
-        "nombre": "Ana",
-        "dni": "44551111",
-        "telefono": "1162554080",
-        "mail": "ana@gmail.com",
-        "dia": "Lunes",
-        "hora": "11:11",
->>>>>>> 21f578724e2114eb5880c5389c561da7ab4720c0
-        "sucesos": ""
-    }
+
 ]

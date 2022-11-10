@@ -10,18 +10,3 @@ def save_new_consulta(consulta):
             wr.writeheader()
 
         wr.writerows(consulta)
-
-
-
-#def all_consultas():
- #   try:
-  #      consultas = []
-   #     with open('db/consultas.csv', 'r') as consultas_file:
-    #        rows = csv.DictReader(consultas_file)
-
-     #       for row in rows:
-      #          consultas.append()
-
-       #     return consultas
-    #except:
-     #   return "No pudimos obtener las consultas"
