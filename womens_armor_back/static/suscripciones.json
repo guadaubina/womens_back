@@ -1,13 +1,10 @@
 [
     {
-        "mailA": "guadaubina@gmail.com",
-        "suscripcion_id": 44
-    },
-    {
         "mailA": "agus@gmail.com",
-        "suscripcion_id": 90
+        "suscripcion_id": 29
     },
     {
+<<<<<<< HEAD
         "mailA": "guadilupe45@gmail.com",
         "suscripcion_id": 84
     },
@@ -18,5 +15,9 @@
     {
         "mailA": "",
         "suscripcion_id": 21
+=======
+        "mailA": "dolo@gmail.com",
+        "suscripcion_id": 74
+>>>>>>> 21f578724e2114eb5880c5389c561da7ab4720c0
     }
 ]

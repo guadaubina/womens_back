@@ -22,9 +22,9 @@ def ver_consultas():
     if os.path.exists(path):
         with open(path, "r") as file:
             forms = json.load(file)  # convert json object to python object
-            return jsonify({"consultas": forms, "message": "Consultas realizadas", "status": "200"})
+            return forms
 
-    return jsonify({"consultas": None, "message": "No se han realizado consultas", "status": "204"})
+    return "No se han realizado consultas"
 
 
 @app.route('/api/v1/forms', methods=['POST'])
@@ -38,8 +38,7 @@ def new_consulta():
             forms.append(new_form)
             json.dump(forms, file, indent=4)  # python dic to json file
             save_new_consulta(forms)
-            return jsonify({"message": "Form successfully registered", "status": "201"})
-
+            return "El formulario ha sido creado de forma exitosa"
     else:
         with open(path, "r+") as file:
             forms = json.load(file)  # load read JSON FILE to dict. #loads read JSON STRING to dict
@@ -47,7 +46,8 @@ def new_consulta():
             file.seek(0)
             json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
             save_new_consulta(forms)
-            return jsonify({"form": new_form, "message": "Form successfully registered", "status": "201"})
+            return "El formulario ha sido completado de forma exitosa"
+
 
     # with open(path_csv, "w") as my_file:
      # wr = csv.DictWriter(my_file, fieldnames=new_form)
@@ -73,7 +73,7 @@ def new_suscripcion():
             forms = list()
             forms.append(new_form)
             json.dump(forms, file, indent=4)  # python dic to json file
-            return jsonify({"form": new_form, "message": "Subscription successfully registered", "status": "201"})
+            return "la suscripción ha sido creada de forma exitosa"
 
     else:
         with open(path, "r+") as file:
@@ -82,7 +82,7 @@ def new_suscripcion():
             forms.append(new_form)
             file.seek(0)
             json.dump(forms, file, indent=4)  # dump write dic in json file. #dumps convert dic to json string
-            return jsonify({"form": new_form, "message": "Subscription successfully registered", "status": "201"})
+            return "la suscripción ha sido realizada de forma exitosa"
 
 
 @app.route('/api/v1/suscripcion', methods=['GET'])
@@ -92,9 +92,9 @@ def ver_suscripciones():
     if os.path.exists(path):
         with open(path, "r") as file:
             suscripciones = json.load(file)  # convert json object to python object
-            return jsonify({"suscripciones": suscripciones, "message": "Suscripciones realizadas", "status": "200"})
+            return suscripciones
 
-    return jsonify({"suscripciones": None, "message": "No se han realizado ninguna suscripcion", "status": "204"})
+    return "No se ha realizado ninguna suscripcion"
 
 
 @app.route('/api/v1/suscripcion/<mail>', methods=['DELETE'])

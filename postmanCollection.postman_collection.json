@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "abd68279-b2a6-40bf-b4db-b741cd83fc3c",
+		"name": "postmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23890180"
+	},
+	"item": [
+		{
+			"name": "GETconsultas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/forms",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"forms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTconsulta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Ana\",\r\n        \"dni\": \"44551111\",\r\n        \"telefono\": \"1162554080\",\r\n        \"mail\": \"ana@gmail.com\",\r\n        \"dia\": \"Lunes\",\r\n        \"hora\": \"11:11\",\r\n        \"sucesos\": \"\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/forms",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"forms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTsuscripcion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"mailA\": \"dolo@gmail.com\",\r\n        \"suscripcion_id\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/suscripcion",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"suscripcion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELsuscripcion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/suscripcion/guadaubina@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"suscripcion",
+						"guadaubina@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETsuscripciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/suscripcion",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"suscripcion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
