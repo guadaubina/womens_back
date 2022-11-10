@@ -28,5 +28,19 @@
         "sucesos": "hola aaa",
         "telefono": "1162554080",
         "suscripcion_id": 21
+    },
+    {
+        "dia": "Lunes",
+        "dni": "44554433",
+        "hora": "11:11",
+        "mail": "guada@gmail.com",
+        "nombre": "Guadalupe",
+        "sucesos": "hola aaa",
+        "telefono": "1162554080",
+        "suscripcion_id": 51
+    },
+    {
+        "mailA": "marti@gmail.com",
+        "suscripcion_id": 94
     }
 ]
