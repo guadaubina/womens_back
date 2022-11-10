@@ -1,18 +1,14 @@
 [
     {
-        "mailA": "guadaubina@gmail.com",
-        "suscripcion_id": 44
-    },
-    {
-        "mailA": "agus@gmail.com",
-        "suscripcion_id": 90
-    },
-    {
         "mailA": "guadilupe45@gmail.com",
         "suscripcion_id": 84
     },
     {
         "mailA": "guadaubina@gmail.com",
         "suscripcion_id": 34
+    },
+    {
+        "mailA": "guadaubina@gmail.com",
+        "suscripcion_id": 50
     }
 ]

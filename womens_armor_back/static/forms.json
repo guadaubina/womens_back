@@ -25,5 +25,23 @@
         "dia": "Miercoles",
         "hora": "11:11",
         "sucesos": ""
+    },
+    {
+        "nombre": "dolo",
+        "dni": "",
+        "telefono": "333",
+        "mail": "dolo@gmail.com",
+        "dia": "Miercoles",
+        "hora": "11:11",
+        "sucesos": ""
+    },
+    {
+        "nombre": "agus",
+        "dni": "",
+        "telefono": "222",
+        "mail": "agus@gmail.com",
+        "dia": "Miercoles",
+        "hora": "11:11",
+        "sucesos": ""
     }
 ]
